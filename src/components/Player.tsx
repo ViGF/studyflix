@@ -1,4 +1,4 @@
-import { DefaultUi, Player as Play, Youtube } from "@vime/react";
+import { DefaultUi, Embed, Player as Play, Youtube } from "@vime/react";
 import { Add, Dislike, Like, PlayModule, Reveal } from "../assets/Icons";
 import InfoModule from "./InfoModule";
 
@@ -22,10 +22,10 @@ export default function Player({ lesson, module }: PlayerProps) {
         <div>
             <div>
                 <div className="pt-20 mx-auto h-full w-full max-w-[1100px] max-h-[60vh] aspect-video">
-                    <Play>
-                        <Youtube videoId={lesson.videoId} />
-                        <DefaultUi />
-                    </Play>
+                    <iframe
+                        src={`https://www.youtube.com/embed/${lesson.videoId}?autoplay=0`}
+                        className='w-full h-[78vh]'
+                    ></iframe>
                 </div>
             </div>
             <div className="p-6">

@@ -7,7 +7,7 @@ module.exports = {
     theme: {
       extend: {
         backgroundImage: {
-            'main': "url(background.png)"
+            'main': "url(./src/assets/background.png)"
         },
         fontFamily: {
             bebas: ['Bebas Neue', 'cursive'],

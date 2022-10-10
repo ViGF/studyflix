@@ -1,0 +1,30 @@
+import { Link } from "react-router-dom";
+import { Polygon } from "../assets/Icons";
+
+interface LessonCardProps {
+    title: string
+    aula: string
+    modulo: string
+    materia: string
+}
+
+export default function LessonCard({ title, aula, modulo, materia }: LessonCardProps) {
+    function reloadPage() {
+        setTimeout(() => {
+            window.location.reload()
+        }, 100);
+    }
+
+    return (
+        <div className="flex flex-row w-fit items-center bg-[#202020] mb-5">
+            <img src="../../public/module.png" alt="" className="brightness-50 hover:brightness-95" width={185} />
+            <p className="ml-5 mr-14 brightness-75 min-w-fit">{title}</p>
+            <Link to={`/${materia}/${modulo}/${aula}`} >
+                <button className="flex flex-row items-center gap-3 text-black bg-white rounded-md text-base py-2 px-4 mr-6 hover:scale-110 transition-transform" onClick={reloadPage}>
+                    <Polygon />
+                    Play
+                </button>
+            </Link>
+        </div>
+    )
+}

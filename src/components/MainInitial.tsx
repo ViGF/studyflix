@@ -2,7 +2,7 @@ import { Info, Play } from "../assets/Icons";
 
 export default function MainInitial() {
     return (
-        <div className="h-screen bg-main bg-cover -z-10">
+        <div className="h-screen bg-[url('../../public/background.png')] bg-cover -z-10">
             <div className="flex flex-col justify-center h-full pl-36 backdrop-brightness-50">
                 <div>
                     <h1 className="font-bebas text-9xl drop-shadow-text bg-clip-text">StudyFlix</h1>
